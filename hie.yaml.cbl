@@ -6,25 +6,25 @@
 #          They need support for multi-cradle:
 #          https://github.com/digital-asset/ghcide/issues/113
 cradle:
-  cabal:
+  multi:
 
     - path: "./test/functional/"
-      component: "haskell-language-server:func-test"
+      config: { cradle: { cabal: { component: "haskell-language-server:func-test" }}}
 
     - path: "./test/utils/"
-      component: "haskell-language-server:hls-test-utils"
+      config: { cradle: { cabal: { component: "haskell-language-server:hls-test-utils" }}}
 
     - path: "./exe/Main.hs"
-      component: "haskell-language-server:exe:haskell-language-server"
+      config: { cradle: { cabal: { component: "haskell-language-server:exe:haskell-language-server" }}}
 
     - path: "./exe/Wrapper.hs"
-      component: "haskell-language-server:exe:haskell-language-server-wrapper"
+      config: { cradle: { cabal: { component: "haskell-language-server:exe:haskell-language-server-wrapper" }}}
 
     - path: "./src"
-      component: "lib:haskell-language-server"
+      config: { cradle: { cabal: { component: "lib:haskell-language-server" }}}
 
     - path: "./ghcide/src"
-      component: "ghcide:lib:ghcide"
+      config: { cradle: { cabal: { component: "ghcide:lib:ghcide" }}}
 
     - path: "./ghcide/exe"
-      component: "ghcide:exe:ghcide"
+      config: { cradle: { cabal: { component: "ghcide:exe:ghcide" }}}
